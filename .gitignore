@@ -1,0 +1,52 @@
+# .NET build files
+*.obj
+*.dll
+*.exe
+*.pdb
+*.userprefs
+*.bak
+*.cache
+*.tmp
+*.log
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+.vscode/
+
+# NuGet packages
+*.nupkg
+packages/
+*.lock
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Aa][Mm][Dd]64/
+publish/
+*.publish.xml
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Resharper
+_ReSharper.*/
+
+# Rider
+.idea/
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Local development
+appsettings.Development.json
+appsettings.Local.json
+appsettings.Production.json
+appsettings.Staging.json
