@@ -1,10 +1,5 @@
 ﻿using Contracts;
 using Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repository
 {
@@ -12,7 +7,7 @@ namespace Repository
     {
         private RepositoryContext _repositoryContext;
         private ICompanyRepository _companyRepository;
-
+        private IEmployeeRepository _employeeRepository;
         public RepositoryManager(RepositoryContext repositoryContext)
         {
             _repositoryContext = repositoryContext;
@@ -25,6 +20,16 @@ namespace Repository
                 if (_companyRepository == null)
                     _companyRepository = new CompanyRepository(_repositoryContext);
                 return _companyRepository;
+            }
+        }
+
+        public IEmployeeRepository Employee
+        {
+            get
+            {
+                if(_employeeRepository == null)
+                    _employeeRepository = new EmployeeRepository(_repositoryContext);
+                return _employeeRepository;
             }
         }
 
